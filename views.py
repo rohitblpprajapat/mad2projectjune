@@ -10,13 +10,7 @@ def create_view(app : Flask, user_datastore : SQLAlchemySessionUserDatastore, db
 
     @app.route('/')
     def home():
-        return render_template_string(
-            """
-                <h1> This is homepage </h1>
-                <div><a href="/login"> login </a></div>
-                <a href="/profile"> Profile page </a>
-            """
-        )
+        return render_template('index.html')
     
     # profile 
     @app.route('/profile')
